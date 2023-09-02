@@ -5,23 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/styles.css">
         <title>My Landing Page</title>
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-        <header class="header">
+        <header id="header" class="header">
             <div class="header-container section">
                 <div class="logo">
                     <ul>
                         <li>
-                            <a href="#">Header Logo</a>
+                            <a href="#header">I Photo</a>
                         </li>
                     </ul>
                 </div>
-                <div class="menus">
+                <div class="left-menu menus">
                     <ul>
-                        <li><a href="#">link-one</a></li>
-                        <li><a href="#">link-two</a></li>
-                        <li><a href="#">link-three</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#photographers">Photographers</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="right-menu menus">
+                    <ul>
+                        <li><a href="#">Log in</a></li>
+                        <li id="sign-up" class="sign-up"><a href="#">Sign up</a></li>
+                    </ul>
+                </div>
+                <!-- Responsive div only visible for smaller screen below 600px wide -->
+                <div onclick="hideShow()" class="hamburger">
+                    <i class="material-icons">view_headline</i>
+                </div>
+                <div id="responsive-menus" class="responsive-menus">
+                    <ul class="responsive-menus-container">
+                        <li class="responsive-menu"><a href="#home">Home</a></li>
+                        <li class="responsive-menu"><a href="#gallery">Gallery</a></li>
+                        <li class="responsive-menu"><a href="#photographers">Photographers</a></li>
+                        <li class="responsive-menu"><a href="#about">About</a></li>
+                        <li class="responsive-menu"><a href="#">Log in</a></li>
+                        <li class="responsive-menu"><a href="#">Sign up</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,62 +52,137 @@
             <section class="hero">
                 <div class="hero-section section">
                     <div class="hero-text">
-                        <h1 class="hero-header">This website is awesome!!</h1>
-                        <p>Amet ducimus eos eveniet nulla odit, reprehenderit culpa nobis sequi dolores expedita veritatis reiciendis hic dignissimos. Laboriosam incidunt rerum nesciunt. Hic, reiciendis.</p>
-                        <button>Sign up</button>
+                        <h1 class="hero-header">Home of talented photographers!!</h1>
+                        <p>Are you looking of talented photographers? I Photo is what you are needing for. Sign up now and book your photographer of choice.</p>
+                        <button class="book-now">Book now</button>
                     </div>
                     <div class="hero-image">
-                        right
+                        <img src="./images/camera.jpg" alt="Camera">
+                        <div class="credit">Image by: toanmda</div>
                     </div>
                 </div>
             </section>
-            <section class="random-information">
-                <div class="random-wrapper section">
+            <section id="gallery" class="random-information">
+                <div class="column-section-wrapper section">
                     <div class="section-header">
-                        <h2>Some Random Information here</h2>
+                        <h2>We capture your best angle</h2>
+                    </div> 
+                    <div class="images">
+                        <div class="image">
+                            <img src="./images/girlpic-001.jpg" alt="girl sitting with hand on her chin">
+                            <div class="credit">Photo by: LEVEL_uP_PICTURES</div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/girlpic-002.jpg" alt="girl having slight side pose in high grasses">
+                            <div class="credit">Photo by: Ashkan</div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/girlspic-001.jpg" alt="two girls happily enjoying the moment in grasses, one having a handy camera">
+                            <div class="credit">Image by: CaiHuuThanh</div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/wedding-couple.jpg" alt="little girl with handy camera aiming a shot">
+                            <div class="credit">Image by: toanmda</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gray-section quote">
+                <div class="quote-section section">
+                    <div>
+                        <q>Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.</q>
+                    </div>
+                    <div class="author">
+                       <p> ᠆ Aaron Siskind</p>
+                    </div>
+                </div>
+            </section>
+            <section id="photographers" class="random-information">
+                <div class="column-section-wrapper section">
+                    <div class="section-header">
+                        <h2>Photographers in the house</h2>
                     </div> 
                     <div class="items-container">
                         <div class="item">
-                            <div class="illustration"></div>
-                            <div class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet assumenda ipsa maiores autem</div>
+                            <div class="profile"></div>
+                            <div class="subtext">
+                                <p><strong>Name:</strong> Juan Dela Cruz</p>
+                                <p><strong>Experience:</strong> 4 years</p>
+                                <p><strong>Talent Fee:</strong> Negotiable</p>
+                            </div>
+                        </div>
+                        <div class="item">  
+                            <div class="profile"></div>
+                            <div class="subtext">
+                                <p><strong>Name:</strong> Juan Dela Cruz</p>
+                                <p><strong>Experience:</strong> 4 years</p>
+                                <p><strong>Talent Fee:</strong> Negotiable</p>
+                            </div>
                         </div>
                         <div class="item">
-                            <div class="illustration"></div>
-                            <div class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet assumenda ipsa maiores autem</div>
+                            <div class="profile"></div>
+                            <div class="subtext">
+                                <p><strong>Name:</strong> Juan Dela Cruz</p>
+                                <p><strong>Experience:</strong> 4 years</p>
+                                <p><strong>Talent Fee:</strong> Negotiable</p>
+                            </div>
                         </div>
                         <div class="item">
-                            <div class="illustration"></div>
-                            <div class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet assumenda ipsa maiores autem</div>
-                        </div>
-                        <div class="item">
-                            <div class="illustration"></div>
-                            <div class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet assumenda ipsa maiores autem</div>
+                            <div class="profile"></div>
+                            <div class="subtext">
+                                <p><strong>Name:</strong> Juan Dela Cruz</p>
+                                <p><strong>Experience:</strong> 4 years</p>
+                                <p><strong>Talent Fee:</strong> Negotiable</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="quote">
-                <div>
-                    <div class="section">
-                        Quote Here
-                    </div>
+            <section id="about" class="gray-section">
+                <div class="column-section-wrapper section">
                     <div>
-                        Author name
+                        <h2>What is I Photo?</h2>
+                    </div>
+                    <div class="about-section">
+                        <div class="company-image">
+                            <img src="./images/company.jpg" alt="Our company image">
+                            <div class="credit">Image by: F1Digitals</div>
+                        </div>
+                        <div class="company-desc">
+                            <p>
+                                I Photo is a company that provides opportunities to freelance photographers who are finding possible clients online. It is like a hub for talented photographers who wants to earn money to add up their income. An easy to go place for someone who is looking for talented photographers to cover their event.
+                            </p> 
+                            <p>
+                                Our vision is to be the leading online platform in photography by providing quality services both to photographers and customers.
+                            </p>
+                            <p>
+                                Our mission is to promote high class quality of talents in photography, making photographers' world class talents known to the people. At the same aspect to help clients covered their memorable and special events by finding photographers of their choice in our platform.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="call-to-action">
-                <div class="section">
-                    <div>Call to Action</div>
-                    <div> sign up button</div>
+            <section class="cta">
+                <div class="cta-section section">
+                    <div class="cta-container">
+                        <div class="left-pane">
+                            <h3>Needing a professional photographer ? Join us!</h3>
+                            <p>Book now to cover yoconst menucontainer = document.getElementById("responsive-menus");ur best moment of our talented photographers in the hub.</p>
+                        </div>
+                        <div class="right-pane">
+                            <button class="book-now bordered-buttoncolor: var(--bc-background-gray);">Book now</button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
             <div class="section">
-                <p>@ Copyright - The Odin Project 2023</p>
+                <p>Copyright <span>&copy; I Photo 2023</span></p>
             </div>
         </footer>
+        <!-- Script -->
+        <script src="./js/script.js" defer></script>
     </body>
 </html>
 
